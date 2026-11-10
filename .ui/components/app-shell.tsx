@@ -11,9 +11,7 @@ import { Button } from "@/components/ui/button";
 import { clearAuthSession } from "@/lib/auth";
 
 const navigation = [
-  { title: "", links: [{ name: "Home", icon: House, href: "/home" }, { name: "Account details", icon: Wallet, href: "/home/accounts/main" }, { name: "Transfer", icon: ArrowLeftRight, href: "/home/transfer" }, { name: "Activity", icon: ReceiptText }, { name: "Reports", icon: FileChartColumn }, { name: "Credit", icon: HandCoins }] },
-  { title: "Sales tools", links: [{ name: "Point of sale", icon: Building2 }, { name: "Payment links", icon: Link2 }, { name: "Subscription plans", icon: CircleDollarSign }, { name: "Card readers", icon: CreditCard }, { name: "Fee calculator", icon: Settings2 }] },
-  { title: "Business", links: [{ name: "Business management", icon: BriefcaseBusiness }, { name: "Sales", icon: ShoppingBag }, { name: "Analytics", icon: ChartNoAxesCombined }, { name: "Fees and installments", icon: BadgeDollarSign }, { name: "Your products", icon: Shirt }] },
+  { title: "", links: [{ name: "Home", icon: House, href: "/home" }, { name: "Account details", icon: Wallet, href: "/home/accounts/main" }, { name: "Transfer", icon: ArrowLeftRight, href: "/home/transfer" }, { name: "Activity", icon: ReceiptText }, { name: "Reports", icon: FileChartColumn }, { name: "Credit", icon: HandCoins }] }
 ];
 
 const ShellContext = createContext<{ showMessage: (text: string) => void }>({ showMessage: () => {} });
