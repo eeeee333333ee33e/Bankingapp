@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #292a35;
+  --muted: #858aa5;
+  --primary: #4c4bf4;
+  --line: #d9dcef;
+  --soft-blue: #e9f0ff;
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+.app-canvas {
+  background:
+    radial-gradient(ellipse at 84% 0%, rgba(76, 75, 244, 0.065), transparent 35%),
+    radial-gradient(ellipse at 7% 26%, rgba(85, 191, 129, 0.04), transparent 28%),
+    linear-gradient(180deg, #f8f9fd 0%, #fff 54%, #f8f9fc 100%);
+}
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.58) 62%, rgba(245, 247, 255, 0.7));
+  box-shadow: 0 12px 32px rgba(38, 48, 100, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.glass-panel-accent {
+  background-image:
+    radial-gradient(ellipse at 92% 8%, rgba(76, 75, 244, 0.1), transparent 38%),
+    radial-gradient(ellipse at 7% 100%, rgba(85, 191, 129, 0.08), transparent 44%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.58) 62%, rgba(245, 247, 255, 0.7));
+}
+button { font: inherit; }
+::selection { background: #dfe5ff; }
+
+.dashboard-scrollbar { scrollbar-width: thin; scrollbar-color: #d9dcef transparent; }
+.dashboard-scrollbar::-webkit-scrollbar { width: 7px; height: 7px; }
+.dashboard-scrollbar::-webkit-scrollbar-thumb { background: #d9dcef; border-radius: 99px; }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise-in { animation: rise-in 420ms ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
